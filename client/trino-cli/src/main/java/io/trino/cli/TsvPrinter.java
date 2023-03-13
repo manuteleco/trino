@@ -67,10 +67,11 @@ public class TsvPrinter
         while (iter.hasNext()) {
             String s = formatValue(iter.next());
 
-            for (int i = 0; i < s.length(); i++) {
-                escapeCharacter(sb, s.charAt(i));
+            if (s != null) {
+                for (int i = 0; i < s.length(); i++) {
+                    escapeCharacter(sb, s.charAt(i));
+                }
             }
-
             if (iter.hasNext()) {
                 sb.append('\t');
             }

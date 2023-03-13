@@ -122,7 +122,7 @@ public class CsvPrinter
     static String formatValue(Object o)
     {
         if (o == null) {
-            return "";
+            return null;
         }
 
         if (o instanceof Map) {
